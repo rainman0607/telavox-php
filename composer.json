@@ -2,6 +2,7 @@
     "name": "rainman/telavox-php",
     "description": "Telavox API Integration for PHP",
     "type": "library",
+    "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
         {
