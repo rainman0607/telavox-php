@@ -4,9 +4,9 @@ This SDK supports the Telavox Flow API ( https://www.telavox.com/en/developer/do
 I'll continue to update it for further new API releases.
 
 ## Getting started
-Start out by running composer-require
+Start out by running composer
 ```
-composer require rainman/telavox-php
+composer require rainman/telavox-php:dev-master
 ```
 
 Afterwards, fetch your Flow API token under: <i> Settings - My Accounts - Username and password </i>
@@ -26,4 +26,4 @@ var_dump($telavox->getCalls());
 ?>
 ```
 
-#Happy coding
+# Happy coding
