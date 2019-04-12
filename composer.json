@@ -9,5 +9,10 @@
             "email": "aske@maze-it.dk"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Telavox\\": "src/"
+        }
+    },
     "require": {}
 }
