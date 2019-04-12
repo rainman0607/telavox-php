@@ -9,7 +9,6 @@
  * I have no other relationship with Telavox beside that I'm one of their client.
  *
  */
-namespace Telavox;
 class Telavox
 {
     const API_ENDPOINT = "https://api.telavox.se";
