@@ -11,9 +11,7 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "Telavox\\": "src/"
-        }
+        "classmap": ["src/"]
     },
     "require": {}
 }
