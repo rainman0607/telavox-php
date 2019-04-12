@@ -1,0 +1,13 @@
+{
+    "name": "rainman/telavox-php",
+    "description": "Telavox API Integration for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aske Merci",
+            "email": "aske@maze-it.dk"
+        }
+    ],
+    "require": {}
+}
