@@ -69,8 +69,11 @@ class Telavox
 
     public function getCalls($fromDate = "", $toDate = "", $withRecordings = false)
     {
-        $result = $this->_api_call('/calls', 'GET', "fromDate=" . $fromDate . "&toDate=" . $toDate . ($withRecordings ? "?withRecordings=true" : ""));
-        return $result;
+        return $this->_api_call(
+        	'/calls',
+			'GET',
+			"fromDate=" . $fromDate . "&toDate=" . $toDate . "?withRecordings=".$withRecordings
+		);
     }
 
 
@@ -81,7 +84,7 @@ class Telavox
      * This function is blocked for users without paid telephony.
      *
      * @param string $number = The number that should be dialed
-     * @param bool $autoanswer = Whether the initial incoming call should be answered automatically.
+     * @param bool $autoAnswer = Whether the initial incoming call should be answered automatically.
      *
      * The default setting is to answer the incoming call automatically.
      * This feature can be turned of by providing false in the function call (see the examples).
@@ -89,10 +92,13 @@ class Telavox
      * For other phone types this parameter will simply be ignored.
      */
 
-    public function dial($number, $autoanswer = true)
+    public function dial($number, $autoAnswer = true)
     {
-        $result = $this->_api_call('/dial/' . $number, 'GET');
-        return $result;
+        return $this->_api_call(
+        	'/dial/' . $number,
+			'GET',
+			"?autoanswer=".$autoAnswer
+		);
     }
 
 
@@ -106,8 +112,11 @@ class Telavox
 
     public function sendSMS($number, $msg)
     {
-        $result = $this->_api_call('/sms/' . $number, 'GET', "?message=" . $msg);
-        return $result;
+		return $this->_api_call(
+			'/sms/' . $number,
+			'GET',
+			"?message=" . $msg
+		);
     }
 
 
@@ -117,8 +126,7 @@ class Telavox
 
     public function hangupCall()
     {
-        $result = $this->_api_call('/hangup', 'POST');
-        return $result;
+        return $this->_api_call('/hangup', 'POST');
     }
 
 
@@ -129,8 +137,7 @@ class Telavox
 
     public function getRecordings($id = "")
     {
-        $result = $this->_api_call('/recordings/' . $id, "GET");
-        return $result;
+        return $this->_api_call('/recordings/' . $id, "GET");
     }
 
 
@@ -144,8 +151,7 @@ class Telavox
 
     public function getExtensions($extension = "")
     {
-        $result = $this->_api_call('/extensions/' . $extension, "GET");
-        return $result;
+        return $this->_api_call('/extensions/' . $extension, "GET");
     }
 
 }
